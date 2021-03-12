@@ -29,9 +29,9 @@ TEST_CASE("Testando funcao fibonacci") {
 
 TEST_CASE("Testando funcao verifica primalidade") {
     sieve();
-    CHECK(isPrime(0) == true);
-    CHECK(isPrime(1) == true);
-    CHECK(isPrime(2) == false);
+    CHECK(isPrime(0) == false);
+    CHECK(isPrime(1) == false);
+    CHECK(isPrime(2) == true);
     
     //numeros de fermat
     CHECK(isPrime(3) == true);
