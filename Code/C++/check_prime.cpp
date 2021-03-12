@@ -37,6 +37,9 @@ bool isPrime(ll no){
     }
     return true;
 }
+
+
+/*
 int main(){
 
 	sieve();
@@ -52,8 +55,7 @@ int main(){
 
    return 0;
 }
-
-/* 
+ 
     Test case :
 
     Input : 45

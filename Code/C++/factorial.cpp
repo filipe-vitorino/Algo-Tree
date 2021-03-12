@@ -13,6 +13,7 @@ using namespace std;
  	return ans;
  }
 
+/*
  int main() {
 
  	int n;
@@ -21,7 +22,7 @@ using namespace std;
  	return 0;
  }
 
-/* 
+
 	Test case :
 
 	Input : 6

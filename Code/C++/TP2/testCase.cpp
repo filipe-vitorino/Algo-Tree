@@ -25,3 +25,19 @@ TEST_CASE("Testando funcao fibonacci") {
     CHECK(fib(20) == 6765);
 }
 
+#include "../check_prime.cpp"
+
+TEST_CASE("Testando funcao verifica primalidade") {
+    sieve();
+    CHECK(isPrime(0) == true);
+    CHECK(isPrime(1) == true);
+    CHECK(isPrime(2) == false);
+    
+    //numeros de fermat
+    CHECK(isPrime(3) == true);
+    CHECK(isPrime(5) == true);
+    CHECK(isPrime(7) == true);
+    CHECK(isPrime(257) == true);  
+    CHECK(isPrime(65537) == true);  
+
+}
