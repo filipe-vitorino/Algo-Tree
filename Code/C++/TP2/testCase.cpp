@@ -110,20 +110,18 @@ TEST_CASE("Testando a estrutura Pilha"){
 TEST_CASE("Testando a estrutura Heap"){
     Heap h;
     CHECK(h.empty() == true);
-   
     h.push(5);
     h.push(3);
     h.push(4);
     h.push(1);
     h.push(2);
-
-    CHECK(s.top() == '1');
+    CHECK(h.top() == 1);
     h.pop();
-    CHECK(s.top() == '2');
+    CHECK(h.top() == 2);
     h.pop();
-    CHECK(s.top() == '3');
+    CHECK(h.top() == 3);
     h.pop();
-    CHECK(s.top() == '4');
+    CHECK(h.top() == 4);
     h.pop();
-    CHECK(s.top() == '5');
+    CHECK(h.top() == 5);
 }
