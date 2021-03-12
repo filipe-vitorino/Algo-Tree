@@ -66,6 +66,9 @@ public:
 	}
 
 };
+
+
+/*
 int main()
 {
 	Stack<int> s;
@@ -89,7 +92,7 @@ int main()
   return 0;
 }
 
-
+/
 /* 
 
 	Test Case :

@@ -90,3 +90,21 @@ TEST_CASE("Testando HeapSort"){
     CHECK(array_check(b_sort, result, 10) == true);
     CHECK(array_check(c_sort, result, 10) == true);
 }
+
+#include "../stack_class.cpp"
+TEST_CASE("Testando a estrutura Pilha"){
+   
+   Stack<int> s;
+   CHECK(s.empty() == true);
+   s.push(5);
+   CHECK(s.top() == 5);
+   s.push(1);
+   s.push(2);
+   CHECK(s.top() != 5);
+   s.pop();
+   CHECK(s.top() == 1);
+   s.push('a');
+   CHECK(s.top() == 'a');
+
+
+}
