@@ -45,6 +45,8 @@ int *quickSort(int *arr, int left_index, int right_index)
     return arr;
 }
 
+
+/*
 int main()
 {
     int n;
@@ -61,9 +63,7 @@ int main()
 
     cout << '\n';
     return 0;
-}
-
-/* 
+} 
     Test Case : 
 
     Input :	7
