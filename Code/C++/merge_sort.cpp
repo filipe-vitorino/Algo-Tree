@@ -92,7 +92,7 @@ void mergesort(int *a ,int s ,int e){
 
 }
 
-
+/*
 int main()
 {
   
@@ -115,7 +115,6 @@ int main()
     return 0;
 }
 
-/* 
     Test case : 
     Input : 6
     4 3 5 6 1 2

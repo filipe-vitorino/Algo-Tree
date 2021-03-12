@@ -60,15 +60,15 @@ TEST_CASE("Testando QuickSort"){
 
 #include "../merge_sort.cpp"
 TEST_CASE("Testando QuickSort"){
-    int a[1] = {1};
+    int a[10] = {1};
     int r1[1] = {1};
-    int* a_sort = mergesort(a, 0, 0);
-    CHECK(array_check(a_sort, r1,1) == true);
+    mergesort(a, 0, 0);
+    CHECK(array_check(a, r1,1) == true);
     int b[10] = {1,2,3,4,5,6,7,8,9,10};
-    int* b_sort = mergesort(b, 0, 9);
+    mergesort(b, 0, 9);
     int c[10] = {5,9,3,1,7,2,10,8,4,6};
-    int* c_sort = mergesort(c, 0, 9);
+    mergesort(c, 0, 9);
     int result[10] = {1,2,3,4,5,6,7,8,9,10};
-    CHECK(array_check(b_sort, result, 10) == true);
-    CHECK(array_check(c_sort, result, 10) == true);
+    CHECK(array_check(b, result, 10) == true);
+    CHECK(array_check(c, result, 10) == true);
 }
