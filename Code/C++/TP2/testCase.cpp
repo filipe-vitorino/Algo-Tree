@@ -59,7 +59,7 @@ TEST_CASE("Testando QuickSort"){
 }
 
 #include "../merge_sort.cpp"
-TEST_CASE("Testando QuickSort"){
+TEST_CASE("Testando MergeSort"){
     int a[10] = {1};
     int r1[1] = {1};
     mergesort(a, 0, 0);
@@ -68,6 +68,21 @@ TEST_CASE("Testando QuickSort"){
     mergesort(b, 0, 9);
     int c[10] = {5,9,3,1,7,2,10,8,4,6};
     mergesort(c, 0, 9);
+    int result[10] = {1,2,3,4,5,6,7,8,9,10};
+    CHECK(array_check(b, result, 10) == true);
+    CHECK(array_check(c, result, 10) == true);
+}
+
+#include "../heap_sort.cpp"
+TEST_CASE("Testando MergeSort"){
+    int a[10] = {1};
+    int r1[1] = {1};
+    heapsort(a);
+    CHECK(array_check(a, r1,1) == true);
+    int b[10] = {1,2,3,4,5,6,7,8,9,10};
+    heapsort(b);
+    int c[10] = {5,9,3,1,7,2,10,8,4,6};
+    heapsort(c);
     int result[10] = {1,2,3,4,5,6,7,8,9,10};
     CHECK(array_check(b, result, 10) == true);
     CHECK(array_check(c, result, 10) == true);
