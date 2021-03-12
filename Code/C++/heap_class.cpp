@@ -83,6 +83,8 @@ public:
     }
 };
 
+/*
+
 int main(){
 
 	Heap h;
@@ -102,7 +104,7 @@ int main(){
 
  return 0;
 }
-
+/
 /*
 
     Test case :
