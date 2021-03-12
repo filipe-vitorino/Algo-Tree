@@ -74,16 +74,19 @@ TEST_CASE("Testando MergeSort"){
 }
 
 #include "../heap_sort.cpp"
-TEST_CASE("Testando MergeSort"){
-    int a[10] = {1};
+TEST_CASE("Testando HeapSort"){
+    vector<int> a{-1,1};
     int r1[1] = {1};
     heapsort(a);
-    CHECK(array_check(a, r1,1) == true);
-    int b[10] = {1,2,3,4,5,6,7,8,9,10};
+    int *a_sort = &a[1];
+    vector<int> b{-1,1,2,3,4,5,6,7,8,9,10};
     heapsort(b);
-    int c[10] = {5,9,3,1,7,2,10,8,4,6};
+    int *b_sort = &b[1];
+    vector<int> c{-1,5,9,3,1,7,2,10,8,4,6};
     heapsort(c);
+    int *c_sort = &c[1];
     int result[10] = {1,2,3,4,5,6,7,8,9,10};
-    CHECK(array_check(b, result, 10) == true);
-    CHECK(array_check(c, result, 10) == true);
+    CHECK(array_check(a_sort, r1,1) == true);
+    CHECK(array_check(b_sort, result, 10) == true);
+    CHECK(array_check(c_sort, result, 10) == true);
 }
