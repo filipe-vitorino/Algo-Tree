@@ -33,9 +33,27 @@ TEST_CASE("Testando funcao verifica primalidade") {
     CHECK(isPrime(65537) == true);  
 }
 
+bool array_check(int *v1, int *v2, int tam){
+    int i;
+    for(i=0; i<tam; i++){
+        if(v1[i] != v2[i] ){
+            return false;
+        }
+    }
+    return true;
+}
+
 #include "../quick_sort.cpp"
 TEST_CASE("Testando QuickSort"){
-    CHECK(quickSort([1], 0, 0) == [1]);
-    CHECK(quickSort([1,2,3,4,5,6,7,8,9,10], 0, 9) == [1,2,3,4,5,6,7,8,9,10]);
-    CHECK(quickSort([5,9,3,1,7,2,10,8,4,6], 0, 9) == [1,2,3,4,5,6,7,8,9,10]);
+    int a[1] = {1};
+    int r1[1] = {1};
+    int* a_sort = quickSort(a, 0, 0);
+    CHECK(array_check(a_sort, r1,1) == true);
+    int b[10] = {1,2,3,4,5,6,7,8,9,10};
+    int* b_sort = quickSort(b, 0, 9);
+    int c[10] = {5,9,3,1,7,2,10,8,4,6};
+    int* c_sort = quickSort(c, 0, 9);
+    int result[10] = {1,2,3,4,5,6,7,8,9,10};
+    CHECK(array_check(b_sort, result, 10) == true);
+    CHECK(array_check(c_sort, result, 10) == true);
 }
